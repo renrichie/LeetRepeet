@@ -1,7 +1,7 @@
 {
   "name": "Leet Repeet",
-  "version": "1.0.2",
-  "description": "Spaced Repetition for better problem retention and memory on leetcode.com to prepare and crack coding interviews",
+  "version": "1.0.3",
+  "description": "This extension offers well-timed/spaced repetition of leetcode problems for better problem retention which helps to be better prepared at the next coding interview",
   "permissions": [
     "storage",
     "declarativeContent",
