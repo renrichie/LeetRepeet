@@ -1,7 +1,7 @@
 {
   "name": "Leet Repeet",
   "version": "1.0.3",
-  "description": "Well-timed/spaced repetition of leetcode problems for better problem retention which helps to be prepared at the next coding interview",
+  "description": "Spaced repetition of leetcode problems for better problem retention which helps to be prepared at the next coding interview",
   "permissions": [
     "storage",
     "declarativeContent",
