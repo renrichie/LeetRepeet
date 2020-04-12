@@ -333,7 +333,6 @@ function generateHomeScreen(username) {
   );
   var scheduledString = JSON.stringify(Object.assign({}, scheduled));
   var scheduledJSON = JSON.parse(scheduledString);
-  console.log(alasql("SELECT * FROM Information"));
   if(Object.keys(scheduledJSON).length == 0){
     document.getElementsByClassName("scheduled-span")[0].innerHTML = "NO PROBLEMS SCHEDULED";
   }
