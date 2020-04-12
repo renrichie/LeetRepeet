@@ -309,7 +309,7 @@ function generateHomeScreen(username) {
   lowerLimit.setHours(lowerLimit.getHours() - 12);
   lowerLimit = lowerLimit.toISOString();
   var upperLimit = new Date();
-  upperLimit.setHours(upperLimit.getHours() + 30);
+  upperLimit.setHours(upperLimit.getHours() + 12);
   upperLimit = upperLimit.toISOString();
   var arr = alasql(
       "SELECT * FROM Information WHERE problemDate > ? AND problemDate < ? AND problemUsername = ? LIMIT 5",
