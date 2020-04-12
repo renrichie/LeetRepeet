@@ -327,6 +327,20 @@ function generateHomeScreen(username) {
     document.getElementsByClassName("problemscreen")[0].innerHTML = listItem;
   }
   rescheduleLower(lowerLimit);
+  var scheduled = alasql(
+      "SELECT * FROM Information WHERE problemDate > ? AND problemUsername = ?",
+      [upperLimit, username]
+  );
+  var scheduledString = JSON.stringify(Object.assign({}, scheduled));
+  var scheduledJSON = JSON.parse(scheduledString);
+  console.log(alasql("SELECT * FROM Information"));
+  if(Object.keys(scheduledJSON).length == 0){
+    document.getElementsByClassName("scheduled-span")[0].innerHTML = "NO PROBLEMS SCHEDULED";
+  }
+  else{
+    var scheduledHTML=getProblemMarkup(scheduledJSON);
+    document.getElementsByClassName("scheduled")[0].innerHTML = scheduledHTML;
+  }
 }
 
 function rescheduleLower(lowerLimit) {
