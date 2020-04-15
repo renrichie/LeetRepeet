@@ -1,15 +1,7 @@
 var problemDate;
 var parent = document.getElementById("buttons");
 parent.addEventListener("click", myFunction);
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-163086542-1']);
-_gaq.push(['_trackPageview']);
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
 function onWindowLoad() {
   chrome.tabs.query(
       {
@@ -392,6 +384,7 @@ function getProblemMarkup(jsonobj) {
   }
   return txt;
 }
+
 function getNoProblemMarkup() {
   var txt =
       "<br> <div>No problems to revisit today.</div> <br> <div>Do some new ones or take a break 💛</div>";
@@ -441,6 +434,7 @@ function getProblemDescription(
         "</strong>"
     );
 }
+
 function getProblemHeader() {
   return '<img class="logo" src="images/32x32dark.png"/> <b class="Heading">Time to <strong>REPEET</strong> 💪</b>';
 }
